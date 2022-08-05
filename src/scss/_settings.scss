@@ -85,18 +85,8 @@ a {
     padding: 0 $container-offset;
     max-width: $container-width;
 
-    @include media(800) {
-        padding: 0 $container-offset - 17px;
-    }
-}
-
-.container-big {
-    margin: 0 auto;
-    padding: 0 $container-offset;
-    max-width: $container-width-big;
-
-    @include media(800) {
-        padding: 0 $container-offset - 17px;
+    @include media(978) {
+        padding: 0 $container-offset - 10px;
     }
 }
 
