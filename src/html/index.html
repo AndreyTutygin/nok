@@ -2,20 +2,28 @@
 <html lang="ru" class="page">
 
 @@include('./common/head.html', {
-    "title": "nok delivery"
+"title": "NOK delivery"
 })
 
 <body class="page-body">
-
     <div class="site-container">
         @@include('./common/header.html')
         <main class="main">
             @@include('./includes/index/hero.html')
             @@include('./includes/index/about.html')
+            @@include('./includes/index/steps.html')
+            @@include('./includes/index/app.html')
+            @@include('./includes/index/info.html')
+            @@include('./includes/index/contacts.html')
         </main>
         @@include('./common/footer.html')
     </div>
-
+    <div class="modal">
+        @@include('./includes/index/popup-work.html')
+        @@include('./includes/index/popup-message.html')
+        @@include('./includes/index/popup-partner.html')
+        @@include('./includes/index/popup-call.html')
+    </div>
 </body>
 
 </html>

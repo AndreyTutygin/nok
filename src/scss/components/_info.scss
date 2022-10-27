@@ -1,0 +1,106 @@
+.info {
+    padding-bottom: 87px;
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 60px 40px;
+        width: 560px;
+        height: 380px;
+        background: center / cover no-repeat;
+        transition: 0.4s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgb(166 166 166 / 60%) 0%, rgb(0 0 0 / 0%) 100%);
+            filter: drop-shadow(0 10px 25px rgb(0 0 0 / 5%));
+            transition: 0.4s;
+        }
+
+        &_courier {
+            background-image: url(./../img/info__img.png);
+        }
+
+        &_partner {
+            background-image: url(./../img/info__img_2.png);
+        }
+
+        &:hover {
+            &::before {
+                background: rgb(35 83 138 / 40%);
+                backdrop-filter: blur(10px);
+            }
+
+            .info__link-title {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .info__txt {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @include media(500) {
+            padding: 10px;
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    &__link-title {
+        position: absolute;
+        z-index: 1;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 20px;
+        color: #fff;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.4s;
+
+        @include media(500) {
+            font-size: 30px;
+        }
+    }
+
+    &__txt {
+        z-index: 1;
+        font-size: 18px;
+        line-height: 26px;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+
+        @include media(500) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    @include media(978) {
+        padding-top: 100px;
+    }
+
+    @include media(500) {
+        padding: 0 0 50px;
+    }
+}

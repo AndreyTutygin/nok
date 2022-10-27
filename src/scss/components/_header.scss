@@ -28,6 +28,11 @@
             width: 30%;
         }
     }
+
+    @include media(1200) {
+        overflow-x: hidden;
+        height: 100vh;
+    }
 }
 
 .nav {
@@ -35,6 +40,35 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @include media(1200) {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 10;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+            width: 300px;
+            height: 100vh;
+            box-shadow: -11px 0 8px 0 rgb(0 0 0 / 20%);
+            background: linear-gradient(85.32deg, #2bc36f 6.78%, #2086a6 89.25%);
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(100%, 0);
+            transition: 0.2s;
+
+            &_active {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
+        }
+
+        @include media(600) {
+            width: 100%;
+            transition: 0.3s;
+        }
     }
 
     &__item {
@@ -53,10 +87,11 @@
         font-size: 18px;
         line-height: 30px;
         color: #fff;
-    }
 
-    @include media(1200) {
-        display: none;
+        &:focus {
+            outline: 3px solid $secondColor;
+            outline-offset: 3px;
+        }
     }
 }
 
@@ -67,6 +102,7 @@
 }
 
 .menu-btn {
+    z-index: 11;
     display: none;
     align-content: center;
     align-items: center;
@@ -78,6 +114,7 @@
     width: 50px;
     height: 50px;
     background-color: #fff;
+    transition: 0.2s;
 
     &__circle {
         display: block;
@@ -87,6 +124,12 @@
         background-color: $secondColor;
 
         &:nth-child(2) {
+            background-color: $mainColor;
+        }
+    }
+
+    &_active {
+        .menu-btn__circle {
             background-color: $mainColor;
         }
     }

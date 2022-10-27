@@ -1,3 +1,134 @@
 .about {
-    padding: 200px 0;
+    position: relative;
+    padding: 74px 0;
+
+    &__slider {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &__advantages {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 75px;
+        gap: 20px;
+    }
+
+    &__advantage {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 40px 32px 16px;
+        width: 360px;
+        box-shadow: 0 1px 15px rgb(0 0 0 / 5%);
+        background-image: url("./../img/about__item_bg.png");
+        background-position: -33% -75%;
+        background-size: 60%;
+        background-repeat: no-repeat;
+    }
+
+    &__advantage-desc {
+        margin: 0;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+
+        @include media(500) {
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+
+    &__banner {
+        padding: 38px 0;
+        background: center / cover no-repeat url("./../img/about__banner.png");
+    }
+
+    &__title {
+        margin: 0 auto;
+        max-width: 935px;
+        font-size: 20px;
+        line-height: 28px;
+        color: #fff;
+
+        @include media(500) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 91px 0 77px;
+        gap: 20px;
+
+        @include media(500) {
+            padding-top: 40px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 320px;
+    }
+
+    &__item-desc {
+        margin: 17px 0 0;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    &__txt {
+        @include media(1400) {
+            margin-top: -45px;
+        }
+
+        @include media(640) {
+            margin-top: -70px;
+            border-radius: 10px;
+            padding: 22px 10px;
+            box-shadow: 0 10px 25px rgb(206 206 206 / 20%);
+            background-color: #fff;
+        }
+    }
+
+    &__parag {
+        font-size: 18px;
+        line-height: 28px;
+
+        &_strong {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 20px;
+
+            @include media(640) {
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+
+        @include media(640) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @include media(978) {
+        padding: 120px 0 15px;
+    }
+
+    @include media(500) {
+        padding-top: 200px;
+    }
 }

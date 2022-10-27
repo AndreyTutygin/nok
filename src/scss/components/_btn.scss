@@ -3,12 +3,33 @@
     width: 136px;
     height: 40px;
     font-size: 13px;
-    line-height: 14px;
+    line-height: 15px;
     color: #fff;
     background-color: $secondColor;
     transition: 0.2s;
 
+    &_grad {
+        text-transform: uppercase;
+        background: linear-gradient(85.32deg, #2bc36f 6.78%, #2086a6 89.25%);
+    }
+
+    &_trans {
+        border: 1px solid #2186a6;
+        text-transform: uppercase;
+        color: #2186a6;
+        background: transparent;
+    }
+
+    &:focus {
+        outline: 3px solid $secondColor;
+        outline-offset: 3px;
+    }
+
     &:hover {
+        background-color: darken($secondColor, 5%);
+    }
+
+    &:active {
         background-color: darken($secondColor, 10%);
     }
 }

@@ -1,0 +1,100 @@
+.contacts {
+    position: relative;
+
+    &__map-iframe {
+        margin-bottom: -6px;
+        width: 100%;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__info {
+        position: absolute;
+        left: 0;
+        bottom: 100px;
+        z-index: 1;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        padding: 17px;
+        max-width: 320px;
+        background: rgb(255 255 255 / 72%);
+        backdrop-filter: blur(24px);
+
+        @include media(500) {
+            left: 0;
+            right: 0;
+            top: -300px;
+            bottom: 0;
+            margin: 0 auto;
+            height: 450px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        font-size: 14px;
+        line-height: 18px;
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+        color: $mainColor;
+
+        &_center {
+            text-align: center;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        margin-right: 16px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        line-height: 38px;
+        text-align: center;
+        background: rgb(43 195 111 / 10%);
+    }
+
+    &__svg {
+        width: 15px;
+        height: 15px;
+        fill: $mainColor;
+    }
+
+    &__btn {
+        display: block;
+        margin: 20px auto 0;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 80px;
+
+    &__icon {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        line-height: 47px;
+        text-align: center;
+        background: #fff;
+    }
+
+    &__svg {
+        width: 20px;
+        height: 20px;
+        fill: #d5d5d5;
+    }
+}
