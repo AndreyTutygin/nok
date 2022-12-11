@@ -4,6 +4,14 @@ export const inputFile = () => {
         let label = input.nextElementSibling,
             labelVal = label.querySelector('.form__file-txt').innerText;
 
+        input.onfocus = () => {
+            label.classList.toggle('form__file_is-focus');
+        }
+
+        input.onblur = () => {
+            label.classList.toggle('form__file_is-focus');
+        }
+
         input.addEventListener('change', function (e) {
 
             if (this.files.length)

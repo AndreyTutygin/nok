@@ -1,117 +1,116 @@
 .steps {
-    padding: 80px 0;
-    background: center / cover no-repeat url("./../img/steps__bg.png");
+  padding: 80px 0;
+  background: center / cover no-repeat url("./../img/steps__bg.png");
 
-    &__section-title {
-        margin: 0;
-    }
+  &__section-title {
+    margin: 0;
+  }
 
-    &__subtitle {
-        margin: 8px 0 0;
-        font-size: 20px;
-        line-height: 20px;
+  &__subtitle {
+    margin: 8px 0 0;
+    font-size: 20px;
+    line-height: 20px;
 
-        @include media(1200) {
-            text-align: center;
-        }
-
-        @include media(500) {
-            font-size: 16px;
-            line-height: 20px;
-        }
-    }
-
-    &__list {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin-top: 100px;
-        gap: 50px;
-
-        @include media(764) {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    &__item {
-        position: relative;
-        display: flex;
-        align-items: start;
-        max-width: 350px;
-        gap: 20px;
-
-        @include media(764) {
-            flex-direction: column;
-            text-align: center;
-        }
-    }
-
-    &__item-num {
-        position: absolute;
-        left: 0;
-        top: -75px;
-        font-weight: 700;
-        font-size: 60px;
-        line-height: 20px;
-        color: #fff;
-
-        @include media(764) {
-            left: -30px;
-            right: 0;
-            top: -18px;
-            bottom: 0;
-            margin: 0 auto;
-        }
-    }
-
-    &__img {
-        position: relative;
-
-        @include media(764) {
-            margin: 0 auto;
-        }
-    }
-
-    &__item-title {
-        margin: 0;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 30px;
-        color: #212121;
-    }
-
-    &__item-parag {
-        margin: 6px 0 0;
-        font-size: 14px;
-        line-height: 20px;
+    @include media(1200) {
+      text-align: center;
     }
 
     @include media(500) {
-        padding: 34px 0;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+    gap: 40px;
+
+    @include media(1024) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 20px;
+  }
+
+  &__item-num {
+    position: absolute;
+    left: 0;
+    top: -75px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 20px;
+    color: #fff;
+  }
+
+  &__img {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background: center / cover no-repeat;
+
+    &_1 {
+      background-image: url("./../img/steps__svg_1.png");
     }
 
-    @include media(978) {
-        padding: 50px 0;
+    &_2 {
+      background-image: url("./../img/steps__svg_2.png");
     }
+
+    &_3 {
+      background-image: url("./../img/steps__svg_3.png");
+    }
+
+    @include media(764) {
+      margin: 0 auto;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: #212121;
+  }
+
+  &__item-parag {
+    margin: 6px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include media(500) {
+    padding: 34px 0;
+  }
+
+  @include media(978) {
+    padding: 50px 0;
+  }
 }
 
 .section-title {
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 45px;
-    color: #292929;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  color: #292929;
 
-    &_blue {
-        color: $secondColor;
-    }
+  &_blue {
+    color: $secondColor;
+  }
 
-    @include media(1200) {
-        text-align: center;
-    }
+  @include media(1200) {
+    text-align: center;
+  }
 
-    @include media(500) {
-        font-size: 30px;
-        line-height: 30px;
-    }
+  @include media(500) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }

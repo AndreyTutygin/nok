@@ -81,8 +81,7 @@
     }
 
     &:focus {
-        outline: 3px solid $secondColor;
-        outline-offset: 3px;
+        outline: 3px solid $isFocusColor;
     }
 
     @include media(500) {
@@ -158,8 +157,7 @@
         }
 
         &:focus {
-            outline: 3px solid $secondColor;
-            outline-offset: 3px;
+            outline: 3px solid $isFocusColor;
         }
     }
 
@@ -174,6 +172,10 @@
         background: #f5f5f5;
         transition: 0.2s;
         cursor: pointer;
+
+        &_is-focus {
+            outline: 3px solid $isFocusColor;
+        }
 
         &-svg {
             margin-right: 10px;
@@ -192,17 +194,6 @@
             width: 1px;
             height: 1px;
             opacity: 0;
-            visibility: hidden;
-
-            &:focus {
-                outline: 3px solid $secondColor;
-                outline-offset: 3px;
-            }
-        }
-
-        &:focus {
-            outline: 3px solid $secondColor;
-            outline-offset: 3px;
         }
 
         &:hover {
@@ -235,8 +226,7 @@
         color: $secondColor;
 
         &:focus {
-            outline: 3px solid $secondColor;
-            outline-offset: 3px;
+            outline: 3px solid $isFocusColor;
         }
     }
 }
@@ -255,8 +245,7 @@
         padding: 10px 0 0 55px;
 
         &:focus {
-            outline: 3px solid $secondColor;
-            outline-offset: 3px;
+            outline: 3px solid $isFocusColor;
         }
 
         &:last-child {
@@ -270,8 +259,7 @@
 }
 
 .custom-checkbox__field:focus+.custom-checkbox__content::before {
-    outline: 3px solid $secondColor;
-    outline-offset: 3px;
+    outline: 3px solid $isFocusColor;
 }
 
 // popup-partner //

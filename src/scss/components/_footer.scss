@@ -24,6 +24,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px 20px;
 
+    &__link {
+        &:focus {
+            outline: 3px solid $isFocusColor;
+        }
+    }
+
     &__title {
         font-size: 15px;
         line-height: 30px;

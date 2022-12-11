@@ -9,8 +9,24 @@
     transition: 0.2s;
 
     &_grad {
+        position: relative;
+        z-index: 1;
         text-transform: uppercase;
         background: linear-gradient(85.32deg, #2bc36f 6.78%, #2086a6 89.25%);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            border-radius: 150px;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(85.32deg, #2bc36f 0.78%, #2086a6 0.25%);
+            opacity: 0;
+            transition: 0.2s;
+        }
     }
 
     &_trans {
@@ -21,8 +37,7 @@
     }
 
     &:focus {
-        outline: 3px solid $secondColor;
-        outline-offset: 3px;
+        outline: 3px solid $isFocusColor;
     }
 
     &:hover {
@@ -31,5 +46,19 @@
 
     &:active {
         background-color: darken($secondColor, 10%);
+    }
+}
+
+.btn_grad {
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        &::before {
+            opacity: 0.5;
+        }
     }
 }

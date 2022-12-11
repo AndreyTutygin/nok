@@ -41,6 +41,10 @@
             background-image: url(./../img/info__img_2.png);
         }
 
+        &:focus {
+            outline: 3px solid $isFocusColor;
+        }
+
         &:hover {
             &::before {
                 background: rgb(35 83 138 / 40%);
